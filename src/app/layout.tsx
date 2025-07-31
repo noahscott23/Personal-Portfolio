@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,17 +26,60 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white text-gray-900`}>
-        <nav className="bg-black-100 p-4 shadow-md">
-          <ul className="flex gap-4 text-lg">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/projects">Projects</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-        <div className="max-w-4xl mx-auto mt-8 px-4">{children}</div>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-black text-white`}>
+        {/* Logo in top left */}
+        <div className="fixed top-4 left-4 z-50">
+          <Image
+            src="/NS-logo.png"
+            alt="Noah Scott Logo"
+            width={250}
+            height={200}
+          />
+        </div>
+        
+        {/* Side Navigation */}
+        <div className="sidenav fixed left-8 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-6">
+          <a 
+            href="#"
+            className="hvr-grow-rotate text-white hover:text-blue-400 font-light text-lg transition-all duration-300 hover:scale-110 hover:rotate-3 cursor-pointer"
+            data-dest="home"
+          >
+            Home
+          </a>
+          <a 
+            href="#"
+            className="hvr-grow-rotate text-white hover:text-blue-400 font-light text-lg transition-all duration-300 hover:scale-110 hover:rotate-3 cursor-pointer"
+            data-dest="about"
+          >
+            About
+          </a>
+          <a 
+            href="#"
+            className="hvr-grow-rotate text-white hover:text-blue-400 font-light text-lg transition-all duration-300 hover:scale-110 hover:rotate-3 cursor-pointer"
+            data-dest="projects"
+          >
+            Projects
+          </a>
+          <a 
+            href="#"
+            className="hvr-grow-rotate text-white hover:text-blue-400 font-light text-lg transition-all duration-300 hover:scale-110 hover:rotate-3 cursor-pointer"
+            data-dest="contact"
+          >
+            Contact
+          </a>
+        </div>
+        
+        <div className="min-h-screen bg-black">{children}</div>
       </body>
     </html>
   );
 }
+
+
+
+
+
+
+
+
+
