@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function HomePage() {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Hi! I'm Noah Scott!";
+  const fullText = "Hi! I&rsquo;m Noah Scott!";
 
   useEffect(() => {
     let index = 0;
@@ -128,7 +128,7 @@ export default function HomePage() {
             <p className="text-sm text-gray-300 mb-4 text-left">
               A comprehensive React-based web application for NFL fantasy football enthusiasts. 
               Features an intelligent chatbot assistant, player statistics, 2025 projections, and 
-              advanced analytics powered by ESPN's API.
+              advanced analytics powered by ESPN&rsquo;s API.
             </p>
 
             {/* Bottom-Right Linked Logo */}
