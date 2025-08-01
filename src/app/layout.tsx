@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Noah Scott Portfolio",
   description: "Computer Science Projects and Profile",
+  icons: {
+    icon: "/NS-logo.png",
+    shortcut: "/NS-logo.png",
+    apple: "/NS-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +31,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon-logo.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon-logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon-logo.png" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-black text-white`}>
         {/* Logo in top left */}
         <div className="fixed top-4 left-4 z-50">
@@ -74,12 +84,6 @@ export default function RootLayout({
     </html>
   );
 }
-
-
-
-
-
-
 
 
 
