@@ -55,9 +55,14 @@ export default function HomePage() {
           <button
             onClick={() => {
               const el = document.getElementById('about');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
+              if (el) {
+                el.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
             }}
-            className="relative px-6 py-3 text-base font-light text-white border border-white rounded-xl hover:text-blue-400 hover:border-blue-400 cursor-pointer transition-all duration-300">
+            className="relative px-6 py-3 text-base font-light text-white border border-white rounded-xl hover:text-blue-400 hover:border-blue-400 cursor-pointer transition-all duration-300 mb-12">
             Learn About Me
           </button>
 
@@ -68,7 +73,7 @@ export default function HomePage() {
       {/* About Section */}
       <div id="about" className="relative min-h-screen flex items-center justify-center px-4">
         {/* Centered Text */}
-        <div className="text-left text-white font-light text-base leading-relaxed max-w-xl z-10">
+        <div className="text-left text-white font-light text-base leading-relaxed max-w-xl z-10 mb-12">
           <h2 className="w-full text-2xl md:text-4xl font-semibold mb-12 text-white text-center glow-text">About Me</h2>
           <p>
             Hello, my name is Noah Scott, and I’m a rising fourth-year Computer Science major at 
@@ -98,17 +103,13 @@ export default function HomePage() {
         </div>
       </div>
 
-
-
-
-
       {/* Projects Section */}
       <div id="projects" className="py-12 px-6">
-        <h3 className="w-full text-2xl md:text-4xl font-semibold mt-12 mb-12 text-white text-center glow-text">Projects</h3>
+        <h3 className="w-full text-2xl md:text-4xl font-semibold mb-12 text-white text-center glow-text">Projects</h3>
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           
           {/* Project 1 */}
-          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-default">
+          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-pointer">
             {/* Top-Left Static Logo */}
             <div className="absolute top-4 left-4 flex gap-3">
             <img 
@@ -125,7 +126,9 @@ export default function HomePage() {
 
             <h4 className="text-base font-bold mb-2 text-white text-left mt-8">Football Stats Application</h4>
             <p className="text-sm text-gray-300 mb-4 text-left">
-              A comprehensive React-based web application for NFL fantasy football enthusiasts. Features an intelligent chatbot assistant, player statistics, 2025 projections, and advanced analytics powered by ESPN's API.
+              A comprehensive React-based web application for NFL fantasy football enthusiasts. 
+              Features an intelligent chatbot assistant, player statistics, 2025 projections, and 
+              advanced analytics powered by ESPN's API.
             </p>
 
             {/* Bottom-Right Linked Logo */}
@@ -138,14 +141,14 @@ export default function HomePage() {
               <img
                 src="/github2.png"
                 alt="GitHub"
-                className="w-6"
+                className="w-8"
               />
             </a>
           </div>
 
 
           {/* Project 2*/}
-          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-default">
+          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-pointer">
             {/* Top-Left Static Logo */}
             <img 
               src="/python.svg" 
@@ -168,14 +171,14 @@ export default function HomePage() {
               <img
                 src="/github2.png"
                 alt="GitHub"
-                className="w-6"
+                className="w-8"
               />
             </a>
           </div>
 
 
           {/* Project 3 */}
-          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-default">
+          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-pointer">
             {/* Top-Left Static Logo */}
             <div className="absolute top-4 left-4 flex gap-3">
             <img 
@@ -205,14 +208,14 @@ export default function HomePage() {
               <img
                 src="/github2.png"
                 alt="GitHub"
-                className="w-6"
+                className="w-8"
               />
             </a>
           </div>
 
 
           {/* Project 4 */}
-          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-default">
+          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-pointer">
             {/* Top-Left Static Logo */}
             <img 
               src="/typescript.svg" 
@@ -235,14 +238,14 @@ export default function HomePage() {
               <img
                 src="/github2.png"
                 alt="GitHub"
-                className="w-6"
+                className="w-8"
               />
             </a>
           </div>
 
 
           {/* Project 5 */}
-          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-default">
+          <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-pointer">
             {/* Top-Left Static Logo */}
             <div className="absolute top-4 left-4 flex gap-3">
             <img 
@@ -272,7 +275,7 @@ export default function HomePage() {
               <img
                 src="/github2.png"
                 alt="GitHub"
-                className="w-6"
+                className="w-8"
               />
             </a>
           </div>
@@ -300,7 +303,7 @@ export default function HomePage() {
 
       {/* Contact Section */}
       <div id="contact" className="py-12 px-6">
-        <h3 className="w-full text-2xl md:text-4xl font-semibold mb-4 mt-20 text-white text-center glow-text">Contact Me</h3>
+        <h3 className="w-full text-2xl md:text-4xl font-semibold mt-24 text-white text-center glow-text">Contact Me</h3>
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex justify-center gap-3 mb-12">
             <a 
@@ -345,6 +348,7 @@ export default function HomePage() {
     </main>
   )
 }
+
 
 
 
