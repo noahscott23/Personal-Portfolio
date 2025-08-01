@@ -16,12 +16,12 @@ A modern, responsive personal portfolio website built with Next.js 15, featuring
 - **Styling**: Tailwind CSS 4 + Custom CSS
 - **Development**: Turbopack (enabled for faster dev builds)
 
-### Performance
+## Performance
 - Turbopack for faster development
 - Images are optimized using Next.js Image component
 - CSS is optimized with Tailwind's purging
 
-### Contact:
+## Contact:
 **Email**: noahs2355@gmail.com
 **LinkedIn**: [noah-scott23](https://www.linkedin.com/in/noah-scott23/)
 **GitHub**: [noahscott23](https://github.com/noahscott23)
