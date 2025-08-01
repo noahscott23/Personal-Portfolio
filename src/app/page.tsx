@@ -44,20 +44,20 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen animated-gradient-bg text-white font-inter transition-all duration-500">
       {/* Hero Section */}
       <div id="home" className="min-h-screen flex items-center justify-center relative">
         <div className="text-center">
-          <h1 className="text-2xl md:text-4xl font-thin mb-6 text-white">
+          <h1 className="text-3xl md:text-5xl font-semibold mb-6 text-white glow-text transition-all duration-300">
             {displayedText}
-            <span className="animate-pulse">|</span>
+            <span className="animate-pulse text-blue-300">|</span>
           </h1>
           <button
             onClick={() => {
               const el = document.getElementById('about');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="relative px-6 py-3 text-base font-semibold text-white border border-white rounded-xl hover:text-blue-400 hover:border-blue-400 cursor-pointer transition-all duration-300">
+            className="relative px-6 py-3 text-base font-light text-white border border-white rounded-xl hover:text-blue-400 hover:border-blue-400 cursor-pointer transition-all duration-300">
             Learn About Me
           </button>
 
@@ -66,45 +66,45 @@ export default function HomePage() {
       </div>
 
       {/* About Section */}
-<div
-  id="about"
-  className="relative min-h-screen flex items-center justify-center px-4 bg-black"
->
-  {/* Centered Text */}
-  <div className="text-center text-white font-light text-base leading-relaxed max-w-xl z-10">
-    <h2 className="text-2xl md:text-4xl font-thin mb-12 text-white text-center w-full">About Me</h2>
-    <p>
-      Hello, my name is Noah Scott and I am an aspiring Software Engineer.
-      I am a passionate computer science student dedicated to building
-      innovative full-stack web applications. <br /><br />
+      <div id="about" className="relative min-h-screen flex items-center justify-center px-4">
+        {/* Centered Text */}
+        <div className="text-left text-white font-light text-base leading-relaxed max-w-xl z-10">
+          <h2 className="w-full text-2xl md:text-4xl font-semibold mb-12 text-white text-center glow-text">About Me</h2>
+          <p>
+            Hello, my name is Noah Scott, and I’m a rising fourth-year Computer Science major at 
+            California Polytechnic State University, San Luis Obispo. I’m passionate about learning new 
+            skills and constantly seeking out new challenges.
+            <br /><br />
 
-      I love exploring new technologies and creating solutions that make a difference.
-      From simple scripts to complex web applications, my journey in Computer Science
-      has been exciting and I'm eager to see what comes next. <br /><br />
+            I enjoy exploring emerging technologies and finding opportunities to grow both as a student 
+            and a developer. Outside of software development, I love traveling and discovering great places 
+            to eat. I also stay active by playing sports—leading intramural and IFC teams in softball, 
+            football, basketball, and volleyball at Cal Poly.
+            <br /><br />
 
-      When I'm not coding, you can find me exploring new technologies,
-      working on personal projects, or learning about the latest trends in software development.
-    </p>
-  </div>
+            I’m excited to keep expanding my knowledge and contributing to meaningful, impactful projects.
+          </p>
+        </div>
 
-  {/* Right-Aligned Image */}
-  <div className="absolute right-8 top-80 transform -translate-y-1/2">
-    <Image
-      src="/noah-scott.png"
-      alt="Noah Scott"
-      width={250}
-      height={357}
-      className="rounded-lg"
-    />
-  </div>
-</div>
+        {/* Right-Aligned Image */}
+        <div className="absolute right-8 top-80 transform -translate-y-1/2">
+          <Image
+            src="/noah-scott.png"
+            alt="Noah Scott"
+            width={250}
+            height={357}
+            className="rounded-lg"
+          />
+        </div>
+      </div>
+
 
 
 
 
       {/* Projects Section */}
       <div id="projects" className="py-12 px-6">
-        <h3 className="text-2xl md:text-4xl font-thin mb-12 text-white text-center w-full">Projects</h3>
+        <h3 className="w-full text-2xl md:text-4xl font-semibold mt-12 mb-12 text-white text-center glow-text">Projects</h3>
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           
           {/* Project 1 */}
@@ -160,7 +160,7 @@ export default function HomePage() {
 
             {/* Bottom-Right Linked Logo */}
             <a
-              href="https://github.com/your-project-5"
+              href="https://github.com/pchen50/SLOmotion"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
@@ -197,7 +197,7 @@ export default function HomePage() {
 
             {/* Bottom-Right Linked Logo */}
             <a
-              href="https://github.com/your-project-5"
+              href="https://github.com/Omarcione/WorkoutPlanner"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
@@ -222,12 +222,12 @@ export default function HomePage() {
 
             <h4 className="text-base font-bold mb-2 text-white text-left mt-8">Ranking Challenge</h4>
             <p className="text-sm text-gray-300 mb-4 text-left">
-              A fun and educational React game that challenges players to identify which categories different topics rank best in. 
+              A fun and educational React game that challenges players to identify which categories different topics rank best in. Currently, there is a U.S. states game implemented.
             </p>
 
             {/* Bottom-Right Linked Logo */}
             <a
-              href="https://github.com/your-project-5"
+              href="https://github.com/noahscott23/us-states-game"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
@@ -244,20 +244,27 @@ export default function HomePage() {
           {/* Project 5 */}
           <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative cursor-default">
             {/* Top-Left Static Logo */}
+            <div className="absolute top-4 left-4 flex gap-3">
             <img 
-              src="/postgres.svg" 
-              alt="GitHub" 
-              className="w-6 absolute top-4 left-4"
+              src="/typescript.svg" 
+              alt="java" 
+              className="w-5"
             />
+            <img 
+              src="/javascript.png" 
+              alt="ts" 
+              className="w-5"
+            />
+            </div>
 
-            <h4 className="text-base font-bold mb-2 text-white text-left mt-8">Project Name 5</h4>
+            <h4 className="text-base font-bold mb-2 text-white text-left mt-8">Personal Portfolio Website</h4>
             <p className="text-sm text-gray-300 mb-4 text-left">
-              Brief description of what this project does and the technologies used.
+              The website you are on right now! Made with Next.js. Github linked below.
             </p>
 
             {/* Bottom-Right Linked Logo */}
             <a
-              href="https://github.com/your-project-5"
+              href="https://github.com/noahscott23/Personal-Portfolio"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
@@ -293,11 +300,11 @@ export default function HomePage() {
 
       {/* Contact Section */}
       <div id="contact" className="py-12 px-6">
-        <h3 className="text-2xl md:text-4xl font-thin mb-4 mt-10 text-white text-center w-full">Contact Me</h3>
+        <h3 className="w-full text-2xl md:text-4xl font-semibold mb-4 mt-20 text-white text-center glow-text">Contact Me</h3>
         <div className="max-w-3xl mx-auto text-center">
-          <div className="flex justify-center gap-3">
+          <div className="flex justify-center gap-3 mb-12">
             <a 
-              href="https://github.com/your-username" 
+              href="https://github.com/noahscott23" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white hover:text-blue-400 font-light text-base transition-all duration-300 hover:scale-110"
@@ -309,7 +316,7 @@ export default function HomePage() {
               />
             </a>
             <a 
-              href="https://github.com/your-username" 
+              href="https://www.linkedin.com/in/noah-scott23/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-white hover:text-blue-400 font-light text-base transition-all duration-300 hover:scale-110"
@@ -321,7 +328,7 @@ export default function HomePage() {
               />
             </a>
             <a 
-              href="https://github.com/your-username" 
+              href="mailto:noahs2355@gmail.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white hover:text-blue-400 font-light text-base transition-all duration-300 hover:scale-110"
@@ -338,9 +345,6 @@ export default function HomePage() {
     </main>
   )
 }
-
-
-
 
 
 

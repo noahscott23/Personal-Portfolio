@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600&display=swap');
 @import "tailwindcss";
 
 html {
@@ -5,8 +6,8 @@ html {
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -23,9 +24,69 @@ html {
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+
+body {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2a2a2a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+/* animated gradient background */
+.animated-gradient-bg {
+  background: linear-gradient(
+    -45deg, 
+    #05060d,  /* almost black with a tiny bluish tint */
+    #0a1128,  /* very dark navy */
+    #131a40,  /* dark navy */
+    #0a1128   /* repeat dark navy for smoothness */
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* glowing text effect */
+.glow-text {
+  text-shadow: 0 0 3px rgba(147, 197, 253, 0.6), 0 0 6px rgba(96, 165, 250, 0.5), 0 0 12px rgba(59, 130, 246, 0.4);
+}
+
+
+/* animated underline on hover */
+.underline-animate {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-animate::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 4px;
+  right: 0;
+  background: #3b82f6;
+  transition: width 0.4s ease;
+  -webkit-transition: width 0.4s ease;
+}
+
+.underline-animate:hover::after {
+  width: 100%;
+  left: 0;
+  background: #60a5fa;
+}
+
 
