@@ -139,7 +139,7 @@ export default function HomePage() {
               className="absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
             >
               <img
-                src="/github2.png"
+                src="/github.png"
                 alt="GitHub"
                 className="w-8"
               />
@@ -169,7 +169,7 @@ export default function HomePage() {
               className="absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
             >
               <img
-                src="/github2.png"
+                src="/github.png"
                 alt="GitHub"
                 className="w-8"
               />
@@ -206,7 +206,7 @@ export default function HomePage() {
               className="absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
             >
               <img
-                src="/github2.png"
+                src="/github.png"
                 alt="GitHub"
                 className="w-8"
               />
@@ -236,7 +236,7 @@ export default function HomePage() {
               className="absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
             >
               <img
-                src="/github2.png"
+                src="/github.png"
                 alt="GitHub"
                 className="w-8"
               />
@@ -273,7 +273,7 @@ export default function HomePage() {
               className="absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
             >
               <img
-                src="/github2.png"
+                src="/github.png"
                 alt="GitHub"
                 className="w-8"
               />
@@ -284,14 +284,14 @@ export default function HomePage() {
           {/*
           <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors relative">
             <img 
-              src="/github2.png" 
+              src="/github.png" 
               alt="GitHub" 
               className="w-6 absolute top-4 left-4"
             />
             <h4 className="text-base font-bold mb-2 text-white text-left mt-8">Project Name 6</h4>
             <p className="text-sm text-gray-300 mb-4 text-left">Brief description of what this project does and the technologies used.</p>
             <img 
-              src="/github2.png" 
+              src="/github.png" 
               alt="GitHub" 
               className="w-6 absolute bottom-2 right-2 hover:scale-110 transition-transform cursor-pointer"
             />
