@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function HomePage() {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Hi! I&rsquo;m Noah Scott!";
+  const fullText = "Hi! I'm Noah Scott!";
 
   useEffect(() => {
     let index = 0;
