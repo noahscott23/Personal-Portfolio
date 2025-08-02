@@ -94,7 +94,7 @@ export default function HomePage() {
         {/* Right-Aligned Image */}
         <div className="absolute right-8 top-80 transform -translate-y-1/2">
           <Image
-            src="/noah-scott.png"
+            src="/noahscott.png"
             alt="Noah Scott"
             width={250}
             height={357}
