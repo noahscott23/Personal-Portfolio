@@ -83,7 +83,7 @@ export default function HomePage() {
 
             I enjoy exploring emerging technologies and finding opportunities to grow both as a student 
             and a developer. Outside of software development, I love traveling and discovering great places 
-            to eat. I also stay active by playing sports—leading intramural and IFC teams in softball, 
+            to eat. I also stay active by playing sports, leading intramural and IFC teams in softball, 
             football, basketball, and volleyball at Cal Poly.
             <br /><br />
 
