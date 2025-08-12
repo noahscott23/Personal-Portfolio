@@ -131,6 +131,22 @@ export default function HomePage() {
               advanced analytics powered by ESPN&rsquo;s API.
             </p>
 
+           {/* Deployed Site Link */}
+          <a
+            href="https://football-app.noahscott5.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-xs gap-2 text-blue-400 hover:text-blue-300 transition-all duration-200 hover:decoration-solid"
+          >
+            <img
+              src="/link.png"
+              alt="Site Icon"
+              className="w-4 h-4"
+            />
+            Visit Deployed Site
+          </a>
+
+
             {/* Bottom-Right Linked Logo */}
             <a
               href="https://github.com/noahscott23/Football-App"
@@ -227,6 +243,21 @@ export default function HomePage() {
             <p className="text-sm text-gray-300 mb-4 text-left">
               A fun and educational React game that challenges players to identify which categories different topics rank best in. Currently, there is a U.S. states game implemented.
             </p>
+
+            {/* Deployed Site Link */}
+          <a
+            href="https://rankings-game.noahscott5.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-xs gap-2 text-blue-400 hover:text-blue-300 transition-all duration-200 hover:decoration-solid"
+          >
+            <img
+              src="/link.png"
+              alt="Site Icon"
+              className="w-4 h-4"
+            />
+            Visit Deployed Site
+          </a>
 
             {/* Bottom-Right Linked Logo */}
             <a
