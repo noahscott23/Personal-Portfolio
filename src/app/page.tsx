@@ -71,10 +71,24 @@ export default function HomePage() {
       </div>
 
       {/* About Section */}
-      <div id="about" className="relative min-h-screen flex items-center justify-center px-4">
+      <div id="about" className="relative min-h-screen flex flex-col md:flex-row items-center justify-center px-4 gap-8">
         {/* Centered Text */}
-        <div className="text-left text-white font-light text-base leading-relaxed max-w-xl z-10 mb-12">
-          <h2 className="w-full text-2xl md:text-4xl font-semibold mb-12 text-white text-center glow-text">About Me</h2>
+        <div className="text-left text-white font-light text-sm md:text-base leading-snug md:leading-relaxed max-w-full md:max-w-xl z-10 order-last md:order-first">
+
+          <h2 className="w-full text-2xl md:text-4xl font-semibold mb-6 text-white text-center glow-text">About Me</h2>
+          {/* mobile image */}
+          <div className="md:hidden w-full flex justify-center mb-6">
+            <div className="relative w-28 sm:w-40">
+              <Image
+                src="/noahscott.png"
+                alt="Noah Scott"
+                width={720}
+                height={1028}
+                className="rounded-lg object-cover"
+                priority
+              />
+            </div>
+          </div>
           <p>
             Hello, my name is Noah Scott, and I’m a rising fourth-year Computer Science major at 
             California Polytechnic State University, San Luis Obispo. I’m passionate about learning new 
@@ -91,8 +105,8 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Right-Aligned Image */}
-        <div className="absolute right-8 top-80 transform -translate-y-1/2">
+        {/* Desktop-only image*/}
+        <div className="hidden md:block absolute right-8 top-80 transform -translate-y-1/2">
           <Image
             src="/noahscott.png"
             alt="Noah Scott"
@@ -346,7 +360,7 @@ export default function HomePage() {
               <img 
                 src="/github-logo.png" 
                 alt="GitHub" 
-                className="h-32"
+                className="w-auto max-w-full h-20 sm:h-28 md:h-32 object-contain"
               />
             </a>
             <a 
@@ -358,7 +372,7 @@ export default function HomePage() {
               <img 
                 src="/linkedin-logo.png" 
                 alt="LinkedIn" 
-                className="h-32"
+                className="w-auto max-w-full h-20 sm:h-28 md:h-32 object-contain"
               />
             </a>
             <a 
@@ -370,7 +384,7 @@ export default function HomePage() {
               <img 
                 src="/email2.png" 
                 alt="Email"
-                className="h-32"
+                className="w-auto max-w-full h-20 sm:h-28 md:h-32 object-contain"
               />
             </a>
           </div>

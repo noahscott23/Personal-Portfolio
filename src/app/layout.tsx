@@ -38,8 +38,13 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon-logo.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-black text-white`}>
-        {/* Logo in top left */}
-        <div className="fixed top-4 left-4 z-50">
+        {/* Logo for mobile */}
+        <div className="fixed top-4 left-4 z-50 md:hidden w-25 h-25">
+          <Image src="/NS-logo.png" alt="Noah Scott Logo" width={100} height={100} />
+        </div>
+        
+        {/* Logo for desktop */}
+        <div className="hidden md:block fixed top-4 left-4 z-50">
           <Image
             src="/NS-logo.png"
             alt="Noah Scott Logo"
@@ -49,7 +54,7 @@ export default function RootLayout({
         </div>
         
         {/* Side Navigation */}
-        <div className="sidenav fixed left-8 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-6">
+        <nav className="sidenav hidden md:flex fixed left-8 top-1/2 transform -translate-y-1/2 z-50 flex-col gap-6" aria-label="Side navigation">
           <a 
             href="#"
             className="hvr-grow-rotate text-white hover:text-blue-400 font-light text-lg transition-all duration-300 hover:scale-110 hover:rotate-3 cursor-pointer"
@@ -78,7 +83,16 @@ export default function RootLayout({
           >
             Contact
           </a>
+        </nav>
+
+        {/* mobile navigation top right */}
+        <div className="flex md:hidden fixed top-4 right-4 z-50 gap-3">
+          <a href="#home" data-dest="home" className="text-sm text-white hover:text-blue-400">Home</a>
+          <a href="#about" data-dest="about" className="text-sm text-white hover:text-blue-400">About</a>
+          <a href="#projects" data-dest="projects" className="text-sm text-white hover:text-blue-400">Projects</a>
+          <a href="#contact" data-dest="contact" className="text-sm text-white hover:text-blue-400">Contact</a>
         </div>
+
         
         <div className="min-h-screen bg-black">{children}</div>
         <Analytics />
