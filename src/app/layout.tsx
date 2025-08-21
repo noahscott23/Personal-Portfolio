@@ -43,12 +43,12 @@ export default function RootLayout({
           <Image src="/NS-logo.png" alt="Noah Scott Logo" width={100} height={100} />
         </div>
         
-        {/* Logo for desktop */}
+        {/* logo for desktop */}
         <div className="hidden md:block fixed top-4 left-4 z-50">
           <Image
             src="/NS-logo.png"
             alt="Noah Scott Logo"
-            width={250}
+            width={250} 
             height={200}
           />
         </div>
